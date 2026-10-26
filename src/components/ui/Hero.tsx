@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { ArrowDown, Download, Mail, MapPin, ChevronRight, Terminal } from 'lucide-react';
+import { ArrowDown, Download, Mail, MapPin, ChevronRight, Terminal, Briefcase } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { PORTFOLIO_DATA } from '../../data/portfolioData';
 import { HeroCard3D } from '../3d/HeroCard3D';
@@ -24,13 +24,13 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-7 text-left space-y-6">
             
             {/* Status Indicator */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-cyan-500/30 backdrop-blur-md shadow-sm">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-emerald-500/30 backdrop-blur-md shadow-sm">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <span className="text-xs font-mono font-medium text-cyan-300 tracking-wide">
-                B.Sc. in CSE • Machine Learning & Software Engineering
+              <span className="text-xs font-mono font-medium text-emerald-300 tracking-wide">
+                Jr. Software Engineer at 3s Softech ltd • 2026
               </span>
             </div>
 
@@ -41,15 +41,22 @@ export const Hero: React.FC = () => {
                 <span className="gradient-accent">Islam Tafsir</span>
               </h1>
               
-              <div className="flex items-center gap-2 mt-4 text-slate-300 font-mono text-sm sm:text-base">
-                <Terminal className="w-4 h-4 text-cyan-400" />
-                <span className="text-cyan-300 font-semibold">{PORTFOLIO_DATA.personal.title}</span>
+              <div className="flex flex-wrap items-center gap-2.5 mt-4 text-slate-300 font-mono text-sm sm:text-base">
+                <div className="flex items-center gap-1.5 text-cyan-300 font-semibold">
+                  <Terminal className="w-4 h-4 text-cyan-400" />
+                  <span>{PORTFOLIO_DATA.personal.title}</span>
+                </div>
+                <span className="text-slate-600">•</span>
+                <div className="flex items-center gap-1.5 text-emerald-300">
+                  <Briefcase className="w-4 h-4 text-emerald-400" />
+                  <span>3s Softech ltd</span>
+                </div>
               </div>
             </div>
 
-            {/* Short Bio strictly from resume */}
+            {/* Short Bio strictly from latest resume */}
             <p className="text-base sm:text-lg text-slate-300/90 leading-relaxed max-w-2xl">
-              Dedicated professional with an academic background in Computer Science and Engineering from <span className="text-white font-medium">IUBAT University</span>, specializing in <span className="text-cyan-300 font-medium">software engineering</span> and <span className="text-purple-300 font-medium">machine learning</span>. Hands-on experience developing real-world applications, predictive models, and algorithms to solve impactful challenges.
+              Dedicated professional with an academic background in Computer Science and Engineering (B.Sc. in CSE from <span className="text-white font-medium">IUBAT University</span>, Passing Year 2026, <span className="text-emerald-400 font-semibold">CGPA 3.29/4.00</span>), specializing in <span className="text-cyan-300 font-medium">software engineering</span> and <span className="text-purple-300 font-medium">machine learning</span>. Currently working on the Software Maintenance System at <span className="text-white font-medium">3s Softech ltd</span>.
             </p>
 
             {/* Location & Quick Contact chips */}

@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { GraduationCap, Award, UserCheck, Mail, Phone, Calendar, Star, Building2 } from 'lucide-react';
+import { GraduationCap, UserCheck, Mail, Phone, Calendar, Star, Building2 } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../../data/portfolioData';
 
 export const Education: React.FC = () => {
@@ -14,10 +14,10 @@ export const Education: React.FC = () => {
             <span>ACADEMIC FOUNDATION</span>
           </div>
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
-            Education, <span className="gradient-accent">Certifications & References</span>
+            Education & <span className="gradient-accent">Faculty References</span>
           </h2>
           <p className="text-slate-400 mt-4 text-base leading-relaxed">
-            Academic achievements, government technical certification, and esteemed department chair references.
+            Verified academic degrees, distinguished GPAs, and department chair references from IUBAT.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export const Education: React.FC = () => {
                   </span>
                 </div>
 
-                <h3 className="font-heading font-bold text-lg sm:text-xl text-white group-hover:text-cyan-300 transition-colors">
+                <h3 className="font-heading font-bold text-lg text-white group-hover:text-cyan-300 transition-colors leading-snug">
                   {edu.institution}
                 </h3>
 
@@ -60,42 +60,6 @@ export const Education: React.FC = () => {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Certification Highlight Card */}
-        <div className="glass-panel rounded-3xl p-6 sm:p-8 mb-12 border border-purple-500/30 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
-          
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
-            <div className="flex items-start gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-500/20 to-indigo-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400 shrink-0">
-                <Award className="w-7 h-7" />
-              </div>
-              <div>
-                <span className="text-xs font-mono uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-purple-500/10 text-purple-300 border border-purple-500/20">
-                  Government Certified Training
-                </span>
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mt-2">
-                  Python With Machine Learning
-                </h3>
-                <p className="text-sm text-slate-300 mt-1">
-                  Enhancing Digital Government & Economy (EDGE) Project
-                </p>
-                <p className="text-xs text-slate-400 mt-2 max-w-xl">
-                  Comprehensive training in advanced Python programming, machine learning model architectures, and applied data systems.
-                </p>
-              </div>
-            </div>
-
-            <div className="p-4 rounded-2xl bg-slate-900/80 border border-white/10 text-center shrink-0">
-              <span className="text-xs font-mono text-emerald-400 font-semibold block">
-                Official Credential
-              </span>
-              <span className="text-[11px] text-slate-400 font-mono mt-0.5 block">
-                ICT Division Bangladesh
-              </span>
-            </div>
-          </div>
         </div>
 
         {/* Academic Faculty References */}
@@ -156,3 +120,4 @@ export const Education: React.FC = () => {
     </section>
   );
 };
+

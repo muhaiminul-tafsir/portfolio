@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { Briefcase, Calendar, MapPin, CheckCircle2, Terminal, Sparkles } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle2, Sparkles, Building2 } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../../data/portfolioData';
 
 export const Experience: React.FC = () => {
@@ -9,15 +9,15 @@ export const Experience: React.FC = () => {
         
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-mono uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-mono uppercase tracking-widest mb-3">
             <Briefcase className="w-3.5 h-3.5" />
-            <span>EXPERIENCE & TIMELINE</span>
+            <span>WORK EXPERIENCE & TIMELINE</span>
           </div>
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
-            Applied Engineering <span className="gradient-accent">& Specialized Training</span>
+            Industry Engineering <span className="gradient-accent">& Academic Systems</span>
           </h2>
           <p className="text-slate-400 mt-4 text-base leading-relaxed">
-            Hands-on technical implementation across academic systems, machine learning research, and state-certified government programs.
+            Hands-on technical implementation across industry software maintenance at 3s Softech ltd and academic machine learning research at IUBAT.
           </p>
         </div>
 
@@ -28,25 +28,42 @@ export const Experience: React.FC = () => {
             <div key={idx} className="relative group">
               
               {/* Timeline Node Dot */}
-              <div className="absolute -left-[31px] md:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-cyan-400 flex items-center justify-center shadow-lg shadow-cyan-500/30 group-hover:scale-125 transition-transform duration-300">
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <div className={`absolute -left-[31px] md:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 ${
+                exp.isCurrent ? 'border-emerald-400' : 'border-cyan-400'
+              } flex items-center justify-center shadow-lg group-hover:scale-125 transition-transform duration-300`}>
+                <span className={`w-2 h-2 rounded-full ${exp.isCurrent ? 'bg-emerald-400 animate-pulse' : 'bg-cyan-400'}`} />
               </div>
 
               {/* Card Container */}
-              <div className="glass-card rounded-3xl p-6 sm:p-8 hover:border-cyan-500/30 transition-all duration-300">
+              <div className={`glass-card rounded-3xl p-6 sm:p-8 transition-all duration-300 ${
+                exp.isCurrent ? 'border-emerald-500/30 hover:border-emerald-500/50' : 'hover:border-cyan-500/30'
+              }`}>
                 
                 {/* Header Row */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-4 border-b border-white/10">
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
-                      {exp.type}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className={`text-xs font-mono uppercase tracking-wider px-2.5 py-0.5 rounded-md ${
+                        exp.isCurrent
+                          ? 'bg-emerald-500/10 text-emerald-300 border border-emerald-500/20'
+                          : 'bg-cyan-500/10 text-cyan-300 border border-cyan-500/20'
+                      }`}>
+                        {exp.type}
+                      </span>
+                      {exp.isCurrent && (
+                        <span className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 font-semibold">
+                          Current Role
+                        </span>
+                      )}
+                    </div>
+
                     <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mt-2">
                       {exp.role}
                     </h3>
+                    
                     <p className="text-sm font-medium text-slate-300 flex items-center gap-1.5 mt-0.5">
-                      <Terminal className="w-4 h-4 text-cyan-400" />
-                      <span>{exp.company}</span>
+                      <Building2 className="w-4 h-4 text-emerald-400" />
+                      <span className="text-white font-semibold">{exp.company}</span>
                     </p>
                   </div>
 
@@ -71,7 +88,7 @@ export const Experience: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
                     <Sparkles className="w-3.5 h-3.5 text-yellow-400" />
-                    <span>Responsibilities & Contributions</span>
+                    <span>Responsibilities & Technical Contributions</span>
                   </h4>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {exp.keyAchievements.map((item, aIdx) => (
@@ -85,7 +102,7 @@ export const Experience: React.FC = () => {
 
                 {/* Tech Pills */}
                 <div className="flex flex-wrap items-center gap-2 pt-2">
-                  <span className="text-xs font-mono text-slate-400 mr-2">Core Tech:</span>
+                  <span className="text-xs font-mono text-slate-400 mr-2">Technologies & Competencies:</span>
                   {exp.skillsUsed.map((skill, sIdx) => (
                     <span
                       key={sIdx}
@@ -106,3 +123,4 @@ export const Experience: React.FC = () => {
     </section>
   );
 };
+

@@ -17,7 +17,7 @@ export interface EducationItem {
   degree: string;
   period: string;
   status: string;
-  gpa?: string;
+  gpa: string;
   description: string;
 }
 
@@ -30,12 +30,25 @@ export interface ReferenceItem {
   email: string;
 }
 
+export interface ExperienceItem {
+  role: string;
+  company: string;
+  period: string;
+  type: string;
+  location: string;
+  description: string;
+  keyAchievements: string[];
+  skillsUsed: string[];
+  isCurrent?: boolean;
+}
+
 export const PORTFOLIO_DATA = {
   personal: {
     name: "Muhaiminul Islam Tafsir",
     shortName: "Tafsir",
     title: "Software Engineer & Machine Learning Specialist",
-    tagline: "Building intelligent software systems & predictive machine learning models.",
+    currentRole: "Jr. Software Engineer at 3s Softech ltd",
+    tagline: "Jr. Software Engineer building high-reliability software systems & predictive machine learning models.",
     about: "I am a dedicated professional with an academic background in Computer Science and Engineering (B.Sc. in CSE from IUBAT University), specializing in software engineering and machine learning. I have hands-on experience through engineering projects and problem-solving, communication, and teamwork abilities. I am eager to apply my technical knowledge to real-world industry challenges and contribute to impactful, high-quality solutions while continuously expanding my expertise.",
     location: "Joydebpur, Gazipur, Dhaka, Bangladesh",
     email: "muhaiminulislamtafsir@gmail.com",
@@ -46,54 +59,52 @@ export const PORTFOLIO_DATA = {
     linkedinUsername: "muhaiminul-islam-tafsir",
     resumePdf: "/Muhaiminul_Islam_Tafsir_Resume.pdf",
     photo: "/profile.png",
-    signature: "/signature.png",
-    statusBadge: "Available for Software Engineering & ML Roles",
+    statusBadge: "Jr. Software Engineer • 3s Softech ltd",
   },
   stats: [
-    { label: "B.Sc. in CSE", value: "IUBAT", description: "Graduating Engineer" },
-    { label: "Featured Projects", value: "4+", description: "Full-Stack & ML Models" },
-    { label: "Core Focus", value: "SE & ML", description: "Algorithms & AI" },
-    { label: "Certification", value: "EDGE", description: "Govt. Digital Economy" },
+    { label: "Current Company", value: "3s Softech", description: "Jr. Software Engineer" },
+    { label: "B.Sc. in CSE", value: "3.29 CGPA", description: "IUBAT Class of 2026" },
+    { label: "Key Stack", value: "React & Python", description: "Modern Web & ML" },
+    { label: "Passing Year", value: "2026", description: "B.Sc. in CSE" },
   ],
   skills: {
-    programming: [
-      { name: "Python", level: "Primary", highlight: true },
-      { name: "C++", level: "Core", highlight: true },
-      { name: "C", level: "Core", highlight: false },
+    coreSkills: [
+      { name: "React.js", category: "Frontend / Web", level: "Proficient", highlight: true },
+      { name: "JavaScript", category: "Programming", level: "Proficient", highlight: true },
+      { name: "Python", category: "Core & Data", level: "Primary", highlight: true },
+      { name: "Machine Learning", category: "AI & Analytics", level: "Advanced", highlight: true },
+      { name: "Git & GitHub", category: "Version Control", level: "Proficient", highlight: true },
+      { name: "Problem Solving", category: "Core Engineering", level: "Advanced", highlight: true },
+      { name: "Team Collaboration", category: "Workplace Skills", level: "Professional", highlight: true },
     ],
-    machineLearning: [
-      { name: "ML Model Implementation", level: "Advanced", highlight: true },
-      { name: "AI Integration", level: "Proficient", highlight: true },
-      { name: "Predictive Analytics", level: "Proficient", highlight: true },
-      { name: "Statistical Modeling", level: "Proficient", highlight: false },
-      { name: "Clinical Data Evaluation", level: "Applied", highlight: false },
-    ],
-    coreEngineering: [
-      { name: "Data Structures & Algorithms", level: "Fundamental", highlight: true },
-      { name: "API Integration", level: "Applied", highlight: true },
-      { name: "Problem Solving", level: "Core", highlight: true },
-      { name: "Desktop GUI Development", level: "Applied", highlight: false },
-      { name: "Real-time Messaging & Sockets", level: "Applied", highlight: false },
-    ],
-    tools: [
-      { name: "Visual Studio Code", level: "Primary IDE", highlight: true },
-      { name: "Git", level: "VCS", highlight: true },
-      { name: "GitHub", level: "Collaboration", highlight: true },
-      { name: "PyQt5", level: "Framework", highlight: false },
-    ],
+    technicalCategorized: {
+      frontendAndLanguages: [
+        { name: "React.js", level: "Modern Frontend", highlight: true },
+        { name: "JavaScript", level: "ES6+ / Web Logic", highlight: true },
+        { name: "Python", level: "Core Architecture & ML", highlight: true },
+      ],
+      machineLearningAndAI: [
+        { name: "Machine Learning", level: "Supervised & Unsupervised", highlight: true },
+        { name: "Predictive Modeling", level: "Clinical & Behavioral Data", highlight: true },
+        { name: "Statistical Analysis", level: "Metric Extraction & Evaluation", highlight: false },
+      ],
+      toolsAndMethods: [
+        { name: "Git & GitHub", level: "Version Control & CI/CD", highlight: true },
+        { name: "Problem Solving", level: "Algorithmic & Debugging", highlight: true },
+        { name: "Software Maintenance", level: "Tracking, Bug Fixes & Optimization", highlight: true },
+      ]
+    },
     personal: [
-      "Management Skills",
-      "Leadership",
-      "Creativity",
-      "Fast Learning",
+      "Team Collaboration",
+      "Problem Solving",
+      "Software Maintenance & Optimization",
       "Communication",
-      "Negotiation",
-      "Attention to Details",
+      "System Reliability",
+      "Fast Learning",
     ],
     languages: [
       { name: "Bengali", proficiency: "Native" },
       { name: "English", proficiency: "Professional Working" },
-      { name: "Hindi", proficiency: "Conversational" },
     ]
   },
   projects: [
@@ -103,8 +114,8 @@ export const PORTFOLIO_DATA = {
       category: "se",
       categoryLabel: "Software Engineering & Web",
       shortDescription: "An interactive online learning platform enabling students to explore courses, schedule sessions, and interact with tutors in real time.",
-      fullDescription: "Quick Tutor is a comprehensive educational platform designed to bridge the gap between students and qualified tutors. The system provides intuitive course discovery, dynamic session scheduling, and real-time interactive communication tools to streamline remote learning workflows.",
-      technologies: ["Python", "API Integration", "Real-Time Sockets", "Web Architecture", "Git & GitHub"],
+      fullDescription: "Quick Tutor is a comprehensive educational platform designed to bridge the gap between students and qualified tutors. The system enables intuitive course discovery, dynamic session scheduling, and real-time interactive communication tools to streamline remote learning workflows.",
+      technologies: ["React.js", "JavaScript", "Python", "API Integration", "Git & GitHub"],
       githubUrl: "https://github.com/muhaiminul-tafsir/Quick-Tutor---online-Learning-Platform",
       highlights: [
         "Enabled students to browse specialized courses and verify tutor qualifications",
@@ -116,11 +127,29 @@ export const PORTFOLIO_DATA = {
       iconName: "book"
     },
     {
+      id: "student-mental-health",
+      title: "Machine Learning Predictive Models to Assess Depression, Anxiety and Stress among University Students",
+      category: "ml",
+      categoryLabel: "Machine Learning & Behavioral Analytics",
+      shortDescription: "Built machine-learning models to predict depression, anxiety, and stress levels among university students using survey data and statistical analysis.",
+      fullDescription: "Mental health across university environments is a critical domain. This academic research project analyzes validated psychometric survey data through machine learning and statistical modeling to quantify and predict levels of depression, anxiety, and stress among tertiary students.",
+      technologies: ["Python", "Machine Learning", "Statistical Analysis", "Survey Data Modeling", "Data Science"],
+      githubUrl: "https://github.com/muhaiminul-tafsir/Machine-Learning-Predictive-Models-to-Assess-depression-Anxiety-and-Stress-among-University-Students",
+      highlights: [
+        "Engineered data pipelines for psychometric survey response normalization",
+        "Applied statistical correlation and regression techniques to isolate stress factors",
+        "Implemented predictive algorithms to identify students at risk of psychological distress",
+        "Provided empirical findings to support student welfare and intervention programs"
+      ],
+      role: "Researcher & ML Engineer — Statistical Modeling & Data Pipelines",
+      iconName: "brain"
+    },
+    {
       id: "heart-attack-risk",
-      title: "Heart Attack Risk Prediction using Machine Learning",
+      title: "Heart Attack Risk Prediction using Machine Learning model",
       category: "ml",
       categoryLabel: "Machine Learning & Healthcare",
-      shortDescription: "Predictive machine learning models developed on clinical patient data to assess heart-attack risk for early detection and preventative healthcare.",
+      shortDescription: "Developed ML models to predict heart-attack risk from clinical data for early detection and prevention.",
       fullDescription: "Cardiovascular health is a leading global medical concern. This project applies machine learning algorithms to clinical physiological indicators, extracting key risk factors and classifying patient cardiac vulnerability to facilitate early medical intervention.",
       technologies: ["Python", "Machine Learning", "Scikit-Learn", "Data Preprocessing", "Clinical Data Analysis"],
       githubUrl: "https://github.com/muhaiminul-tafsir/Heart-Attack-Risk-Prediction",
@@ -132,109 +161,68 @@ export const PORTFOLIO_DATA = {
       ],
       role: "ML Engineer — Data Preprocessing & Model Evaluation",
       iconName: "heart"
-    },
-    {
-      id: "student-mental-health",
-      title: "ML Predictive Models to Assess Depression, Anxiety & Stress",
-      category: "ml",
-      categoryLabel: "Machine Learning & Behavioral Analytics",
-      shortDescription: "Machine learning research models predicting depression, anxiety, and stress levels among university students using survey data and statistical analysis.",
-      fullDescription: "Mental health across university environments is a critical yet underserved domain. This academic research project analyzes validated psychometric survey data through machine learning and statistical modeling to quantify and predict levels of depression, anxiety, and stress among tertiary students.",
-      technologies: ["Python", "Machine Learning", "Statistical Analysis", "Survey Data Modeling", "Data Science"],
-      githubUrl: "https://github.com/muhaiminul-tafsir/Machine-Learning-Predictive-Models-to-Assess-depression-Anxiety-and-Stress-among-University-Students",
-      highlights: [
-        "Engineered data pipelines for psychometric survey response normalization",
-        "Applied statistical correlation and regression techniques to isolate stress factors",
-        "Implemented predictive algorithms to identify students at risk of psychological distress",
-        "Provided empirical findings to support university student welfare interventions"
-      ],
-      role: "Researcher & ML Engineer — Statistical Modeling & Data Pipelines",
-      iconName: "brain"
-    },
-    {
-      id: "age-calculator",
-      title: "Age Calculator Desktop Application",
-      category: "se",
-      categoryLabel: "Desktop Software Engineering",
-      shortDescription: "A precision desktop application built with PyQt5 that calculates a person's exact chronological age down to years, months, and days.",
-      fullDescription: "A clean, responsive desktop utility crafted with Python and PyQt5. Designed with strict date-time arithmetic that gracefully handles calendar variations, leap years, and date verification with an intuitive user interface.",
-      technologies: ["Python", "PyQt5", "GUI Architecture", "Event Handling", "Date Algorithms"],
-      githubUrl: "https://github.com/muhaiminul-tafsir/Age-Calculator",
-      highlights: [
-        "Developed custom GUI layout with PyQt5 components and responsive window sizing",
-        "Implemented rigorous date algorithms taking into account variable month lengths and leap years",
-        "Provides precise breakdown of age in years, months, days, and milestone countdowns",
-        "Engineered error prevention for invalid dates and future timestamp inputs"
-      ],
-      role: "Desktop Application Developer — UI & Logic Implementation",
-      iconName: "calculator"
     }
   ] as ProjectItem[],
   experience: [
     {
-      role: "Software Engineering & Machine Learning Practitioner",
-      company: "Academic & Open-Source Projects (IUBAT)",
-      period: "2022 — Present",
-      type: "Academic & Project Experience",
+      role: "Jr. Software Engineer",
+      company: "3s Softech ltd",
+      period: "2026",
+      type: "Industry Professional Experience",
       location: "Dhaka, Bangladesh",
-      description: "Developing production-grade desktop applications, web-based tutoring systems, and predictive machine learning models addressing healthcare and student wellness.",
+      isCurrent: true,
+      description: "Working on the Software Maintenance System designed to support efficient tracking and management of software issues. Responsible for identifying and fixing bugs, improving system performance, and implementing feature updates. Collaborating with the team to ensure system reliability, smooth operation, and regular optimization of existing modules.",
       keyAchievements: [
-        "Architected full-featured desktop GUI utilities and real-time collaborative web systems",
-        "Engineered end-to-end machine learning workflows: data cleansing, feature extraction, model training, and performance validation",
-        "Implemented algorithmic problem-solving across core computer science challenges using Python and C++",
-        "Collaborated with academic faculty on data-driven research initiatives"
+        "Identified, investigated, and resolved software bugs to ensure optimal system stability",
+        "Optimized module performance, query response times, and overall system efficiency",
+        "Implemented feature updates and functional improvements across core maintenance modules",
+        "Collaborated with cross-functional engineering team to ensure system reliability and operational continuity"
       ],
-      skillsUsed: ["Python", "C++", "ML Models", "Data Structures", "API Integration", "Git & GitHub"]
+      skillsUsed: ["React.js", "JavaScript", "Python", "Problem Solving", "Git & GitHub", "Team Collaboration"]
     },
     {
-      role: "Trainee — Python with Machine Learning",
-      company: "EDGE Project (Enhancing Digital Government & Economy)",
-      period: "Specialized Training Certification",
-      type: "Government Tech Initiative",
-      location: "Bangladesh",
-      description: "Intensive government-sponsored professional training program focusing on modern Python engineering, applied machine learning algorithms, and real-world data pipelines.",
+      role: "Academic & Project Software Engineer",
+      company: "IUBAT — International University of Business Agriculture and Technology",
+      period: "2022 — 2026",
+      type: "Degree & Research Practicum",
+      location: "Dhaka, Bangladesh",
+      isCurrent: false,
+      description: "Applied computer science research and hands-on system development across collaborative web platforms, data structures, algorithms, and predictive machine learning models.",
       keyAchievements: [
-        "Mastered advanced machine learning pipelines and mathematical foundations",
-        "Implemented supervised and unsupervised algorithms on diverse industry datasets",
-        "Completed hands-on capstones focused on predictive modeling and digital economy automation"
+        "Engineered Quick Tutor — a full-featured real-time online educational platform",
+        "Conducted empirical ML research on university student psychological distress prediction",
+        "Trained and evaluated clinical data classification models for heart attack risk prediction",
+        "Graduating with B.Sc. in CSE with distinguished CGPA 3.29 / 4.00"
       ],
-      skillsUsed: ["Python", "Machine Learning", "Data Processing", "AI Integration", "Statistical Models"]
+      skillsUsed: ["Python", "React.js", "JavaScript", "Machine Learning", "Git & GitHub", "Problem Solving"]
     }
-  ],
+  ] as ExperienceItem[],
   education: [
     {
-      institution: "IUBAT — International University of Business Agriculture and Technology",
-      degree: "Bachelor's of Science in Computer Science and Engineering (B.Sc. in CSE)",
-      period: "2022 — Present",
-      status: "In Progress",
-      gpa: "CGPA 3.29 / 4.00",
-      description: "Specializing in software engineering, machine learning, data structures, algorithms, and applied computer systems."
+      institution: "INTERNATIONAL UNIVERSITY OF BUSINESS AGRICULTURE AND TECHNOLOGY (IUBAT)",
+      degree: "Bachelor's of Science in CSE",
+      period: "Passing Year: 2026",
+      status: "Graduating 2026",
+      gpa: "CGPA: 3.29 / 4.00",
+      description: "Comprehensive education in computer science, software engineering, machine learning, algorithmic problem solving, and modern web architectures."
     },
     {
-      institution: "Tongi Gov’t College",
-      degree: "Higher Secondary Certificate (HSC) — Science",
+      institution: "TONGI GOV’T COLLEGE",
+      degree: "Completed HSC in Science background",
       period: "Passing Year: 2019",
       status: "Completed",
-      gpa: "GPA 4.92 / 5.00",
-      description: "Focused on higher mathematics, physics, and chemistry with distinguished academic standing."
+      gpa: "GPA: 4.92 / 5.00",
+      description: "High academic distinction in physics, chemistry, and higher mathematics."
     },
     {
-      institution: "A.M. High School",
-      degree: "Secondary School Certificate (SSC) — Science",
+      institution: "A.M. HIGH SCHOOL",
+      degree: "Completed SSC in Science background",
       period: "Passing Year: 2017",
       status: "Completed",
-      gpa: "GPA 4.73 / 5.00",
+      gpa: "GPA: 4.73 / 5.00",
       description: "Foundational science and mathematics with excellence in academic performance."
     }
   ] as EducationItem[],
-  certifications: [
-    {
-      title: "Python With Machine Learning",
-      issuer: "Enhancing Digital Government & Economy (EDGE) Project",
-      focus: "Applied Machine Learning, Statistical Analysis, and Advanced Python Programming",
-      badge: "Govt. of Bangladesh Certified"
-    }
-  ],
   references: [
     {
       name: "Dr. Utpal Kanti Das",

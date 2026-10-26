@@ -30,7 +30,7 @@ export const Projects: React.FC = () => {
               Production Systems & <span className="gradient-accent">Machine Learning</span>
             </h2>
             <p className="text-slate-400 mt-2 text-sm sm:text-base max-w-xl">
-              Authentic software solutions and predictive models engineered with Python, C++, PyQt5, and machine learning pipelines.
+              Projects featured on the latest resume engineered with React.js, JavaScript, Python, Scikit-Learn, and applied statistical modeling.
             </p>
           </div>
 
@@ -66,13 +66,13 @@ export const Projects: React.FC = () => {
               }`}
             >
               <Code2 className="w-3.5 h-3.5" />
-              <span>Software Apps (2)</span>
+              <span>Software Apps (1)</span>
             </button>
           </div>
         </div>
 
         {/* 3D Interactive Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <ProjectCard3D
               key={project.id}
@@ -90,10 +90,10 @@ export const Projects: React.FC = () => {
             </div>
             <div>
               <h3 className="font-heading font-bold text-lg text-white">
-                Explore More on GitHub
+                Explore More Repositories on GitHub
               </h3>
               <p className="text-xs text-slate-400 font-mono mt-0.5">
-                github.com/{PORTFOLIO_DATA.personal.githubUsername} • Active open source repositories
+                github.com/{PORTFOLIO_DATA.personal.githubUsername} • Active code repositories
               </p>
             </div>
           </div>

@@ -1,5 +1,5 @@
 ﻿import React, { useRef, useState } from 'react';
-import { Sparkles, Terminal, Award, CheckCircle2 } from 'lucide-react';
+import { Briefcase, Building2, CheckCircle2, GraduationCap } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../../data/portfolioData';
 
 export const HeroCard3D: React.FC = () => {
@@ -19,13 +19,11 @@ export const HeroCard3D: React.FC = () => {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    // Subtle max tilt 12 degrees
     const rX = ((y - centerY) / centerY) * -10;
     const rY = ((x - centerX) / centerX) * 10;
 
     setRotateX(rX);
     setRotateY(rY);
-
     setGlareX((x / rect.width) * 100);
     setGlareY((y / rect.height) * 100);
   };
@@ -69,13 +67,13 @@ export const HeroCard3D: React.FC = () => {
           <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-[11px] font-medium tracking-wide text-emerald-300 uppercase">
-              Open to Opportunities
+              3s Softech ltd • 2026
             </span>
           </div>
 
           <div className="flex items-center gap-1.5 text-xs text-slate-400 font-mono">
             <span className="w-2 h-2 rounded-full bg-cyan-400/80" />
-            <span>CSE • IUBAT</span>
+            <span>CSE (IUBAT)</span>
           </div>
         </div>
 
@@ -84,7 +82,7 @@ export const HeroCard3D: React.FC = () => {
           <img
             src={PORTFOLIO_DATA.personal.photo}
             alt={PORTFOLIO_DATA.personal.name}
-            className="w-full h-full object-cover object-top filter contrast-[1.03] transition-transform duration-700 group-hover:scale-105"
+            className="w-full h-full object-cover object-center filter contrast-[1.03] transition-transform duration-700 group-hover:scale-105"
             loading="eager"
           />
 
@@ -92,37 +90,33 @@ export const HeroCard3D: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-75" />
           <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
 
-          {/* In-photo floating mini badge: Focus */}
-          <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between bg-slate-900/80 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/10">
+          {/* In-photo floating mini badge */}
+          <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between bg-slate-900/85 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/10">
             <div className="flex items-center gap-2">
-              <Terminal className="w-4 h-4 text-cyan-400" />
-              <span className="text-xs font-semibold text-slate-200">Software & ML</span>
+              <Briefcase className="w-4 h-4 text-cyan-400" />
+              <span className="text-xs font-semibold text-slate-200">Jr. Software Engineer</span>
             </div>
-            <div className="flex items-center gap-1 text-[11px] text-slate-300">
+            <div className="flex items-center gap-1 text-[11px] text-emerald-300">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Verified CV</span>
+              <span>Verified 2026</span>
             </div>
           </div>
         </div>
 
-        {/* Bottom Card Identity & Signature */}
+        {/* Bottom Card Identity */}
         <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
           <div>
             <h3 className="font-heading font-bold text-lg text-white tracking-tight">
               {PORTFOLIO_DATA.personal.name}
             </h3>
-            <p className="text-xs text-slate-400 flex items-center gap-1.5 mt-0.5">
-              <span>Joydebpur, Gazipur, Dhaka</span>
+            <p className="text-xs text-cyan-400 flex items-center gap-1.5 mt-0.5">
+              <span>Jr. Software Engineer at 3s Softech ltd</span>
             </p>
           </div>
 
-          {/* Authentic Signature from Resume */}
-          <div className="relative h-10 w-28 bg-white/[0.04] rounded-lg p-1 border border-white/10 flex items-center justify-center">
-            <img
-              src={PORTFOLIO_DATA.personal.signature}
-              alt="Official Signature of Muhaiminul Islam Tafsir"
-              className="max-h-full max-w-full object-contain filter invert contrast-125 opacity-90"
-            />
+          <div className="px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/10 text-right">
+            <span className="text-[10px] font-mono text-slate-400 block uppercase">CGPA</span>
+            <span className="text-xs font-bold text-emerald-400 font-mono">3.29 / 4.00</span>
           </div>
         </div>
       </div>
@@ -133,11 +127,11 @@ export const HeroCard3D: React.FC = () => {
         style={{ animationDelay: '0s' }}
       >
         <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">
-          <Sparkles className="w-4 h-4" />
+          <Building2 className="w-4 h-4" />
         </div>
         <div>
-          <p className="text-[10px] text-slate-400 font-mono uppercase">Specialization</p>
-          <p className="text-xs font-bold text-slate-200">Predictive ML & AI</p>
+          <p className="text-[10px] text-slate-400 font-mono uppercase">Current Role</p>
+          <p className="text-xs font-bold text-slate-200">3s Softech ltd</p>
         </div>
       </div>
 
@@ -147,11 +141,11 @@ export const HeroCard3D: React.FC = () => {
         style={{ animationDelay: '2.5s' }}
       >
         <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400">
-          <Award className="w-4 h-4" />
+          <GraduationCap className="w-4 h-4" />
         </div>
         <div>
-          <p className="text-[10px] text-slate-400 font-mono uppercase">Certification</p>
-          <p className="text-xs font-bold text-slate-200">EDGE Python ML</p>
+          <p className="text-[10px] text-slate-400 font-mono uppercase">Degree</p>
+          <p className="text-xs font-bold text-slate-200">B.Sc. in CSE (2026)</p>
         </div>
       </div>
     </div>

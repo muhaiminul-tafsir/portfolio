@@ -207,6 +207,7 @@ export const PORTFOLIO_DATA = {
       degree: "Bachelor's of Science in Computer Science and Engineering (B.Sc. in CSE)",
       period: "2022 — Present",
       status: "In Progress",
+      gpa: "CGPA 3.29 / 4.00",
       description: "Specializing in software engineering, machine learning, data structures, algorithms, and applied computer systems."
     },
     {
@@ -253,3 +254,4 @@ export const PORTFOLIO_DATA = {
     }
   ] as ReferenceItem[]
 };
+

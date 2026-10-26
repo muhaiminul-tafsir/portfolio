@@ -23,7 +23,7 @@ Built with **React 19**, **TypeScript**, **Three.js**, **Tailwind CSS**, and **V
     3. **Student Depression, Anxiety & Stress Prediction** — Multivariate ML and statistical analysis on university student mental health data.
     4. **Age Calculator Desktop Application** — Precision desktop GUI application engineered with PyQt5.
   - **Skills Matrix**: Categorized according to the resume into Programming Languages, Machine Learning & AI, Core Engineering, Developer Tools, and Personal Leadership competencies.
-  - **Education, Certifications & Faculty References**: Verified degrees with GPAs (IUBAT, Tongi Gov't College, A.M. High School), EDGE certification, and direct contact details of department chairman and coordinator.
+  - **Education, Certifications & Faculty References**: Verified degrees with GPAs (IUBAT CGPA 3.29 / 4.00, Tongi Gov't College GPA 4.92 / 5.00, A.M. High School GPA 4.73 / 5.00), EDGE certification, and direct contact details of department chairman and coordinator.
   - **Contact Section**: One-click email copy with clipboard feedback, direct phone/location, social/GitHub links, and interactive message form.
   - **Download Resume Button**: One-click download of the official resume PDF (`Muhaiminul_Islam_Tafsir_Resume.pdf`).
 
@@ -101,3 +101,4 @@ Drag and drop the `dist` folder into the Netlify dashboard, or link your GitHub 
 ## 📄 License
 
 This portfolio repository is open source under the MIT License.
+

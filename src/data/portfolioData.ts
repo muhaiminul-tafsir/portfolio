@@ -42,6 +42,23 @@ export interface ExperienceItem {
   isCurrent?: boolean;
 }
 
+export interface CertificateItem {
+  id: string;
+  title: string;
+  recipient: string;
+  issuer: string;
+  conductedBy: string;
+  program: string;
+  duration: string;
+  dateOfIssue: string;
+  serialNumber: string;
+  image: string;
+  pdf: string;
+  skills: string[];
+  description: string;
+  badge: string;
+}
+
 export const PORTFOLIO_DATA = {
   personal: {
     name: "Muhaiminul Islam Tafsir",
@@ -65,7 +82,7 @@ export const PORTFOLIO_DATA = {
     { label: "Current Company", value: "3s Softech", description: "Jr. Software Engineer" },
     { label: "B.Sc. in CSE", value: "3.29 CGPA", description: "IUBAT Class of 2026" },
     { label: "Key Stack", value: "React & Python", description: "Modern Web & ML" },
-    { label: "Passing Year", value: "2026", description: "B.Sc. in CSE" },
+    { label: "Certification", value: "EDGE Certified", description: "Python with ML" },
   ],
   skills: {
     coreSkills: [
@@ -197,6 +214,24 @@ export const PORTFOLIO_DATA = {
       skillsUsed: ["Python", "React.js", "JavaScript", "Machine Learning", "Git & GitHub", "Problem Solving"]
     }
   ] as ExperienceItem[],
+  certificates: [
+    {
+      id: "edge-python-ml",
+      title: "Python with Machine Learning",
+      recipient: "Muhaiminul Islam Tafsir",
+      issuer: "Bangladesh Computer Council, ICT Division",
+      conductedBy: "Department of Computer Science and Engineering (CSE), Jagannath University",
+      program: "Enhancing Digital Government and Economy (EDGE) Project",
+      duration: "80 Hours (Nov 2024 to May 2025)",
+      dateOfIssue: "22-Jul-2025",
+      serialNumber: "EDGE-DSTS-106-2639-00032",
+      image: "/edge_certificate.png",
+      pdf: "/EDGE_Python_ML_Certificate_Muhaiminul_Islam_Tafsir.pdf",
+      skills: ["Python", "Machine Learning", "Supervised Learning", "Unsupervised Learning", "Data Preprocessing", "Statistical Modeling"],
+      description: "Successfully completed 80 hours of rigorous professional training on Python with Machine Learning under the national Enhancing Digital Government and Economy (EDGE) Project, conducted by the Department of Computer Science and Engineering at Jagannath University and certified by Bangladesh Computer Council, ICT Division.",
+      badge: "Govt. of Bangladesh Certified"
+    }
+  ] as CertificateItem[],
   education: [
     {
       institution: "INTERNATIONAL UNIVERSITY OF BUSINESS AGRICULTURE AND TECHNOLOGY (IUBAT)",
@@ -242,4 +277,3 @@ export const PORTFOLIO_DATA = {
     }
   ] as ReferenceItem[]
 };
-

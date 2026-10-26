@@ -25,6 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
     { label: 'EXPERIENCE', href: '#experience', id: 'experience' },
     { label: 'PROJECTS', href: '#projects', id: 'projects' },
     { label: 'SKILLS', href: '#skills', id: 'skills' },
+    { label: 'CERTIFICATION', href: '#certifications', id: 'certifications' },
     { label: 'EDUCATION', href: '#education', id: 'education' },
     { label: 'CONTACT', href: '#contact', id: 'contact' },
   ];
@@ -184,3 +185,4 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
     </header>
   );
 };
+

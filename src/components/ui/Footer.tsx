@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
               <a href="#experience" className="text-slate-400 hover:text-cyan-300 transition-colors py-1">Experience</a>
               <a href="#projects" className="text-slate-400 hover:text-cyan-300 transition-colors py-1">Featured Work</a>
               <a href="#skills" className="text-slate-400 hover:text-cyan-300 transition-colors py-1">Skills</a>
-              <a href="#education" className="text-slate-400 hover:text-cyan-300 transition-colors py-1">Education</a>
+              <a href="#certifications" className="text-slate-400 hover:text-cyan-300 transition-colors py-1">Certification</a>`r`n              <a href="#education" className="text-slate-400 hover:text-cyan-300 transition-colors py-1">Education</a>
               <a href="#contact" className="text-slate-400 hover:text-cyan-300 transition-colors py-1">Contact</a>
               <a href={PORTFOLIO_DATA.personal.resumePdf} download className="text-cyan-400 hover:underline transition-colors py-1">Download CV</a>
             </div>
@@ -122,3 +122,4 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+

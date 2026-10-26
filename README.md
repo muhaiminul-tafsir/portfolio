@@ -23,6 +23,10 @@ Built with **React 19**, **TypeScript**, **Three.js**, **Tailwind CSS**, and **V
     1. **Quick Tutor** — Real-time interactive online learning & session scheduling platform.
     2. **Machine Learning Predictive Models to Assess Depression, Anxiety and Stress among University Students** — Multivariate ML and statistical analysis on student distress survey data.
     3. **Heart Attack Risk Prediction using Machine Learning model** — Clinical data classification models for early cardiac risk detection.
+  - **Certifications & Credentials Showcase**:
+    - High-resolution interactive certificate viewer for **Python with Machine Learning** (EDGE Project, ICT Division & Jagannath University).
+    - Clicking on the certificate card opens an immersive modal viewer.
+    - Direct **Download Certificate (PDF)** button allowing recruiters to download the authentic PDF certificate (`EDGE_Python_ML_Certificate_Muhaiminul_Islam_Tafsir.pdf`).
   - **Skills Matrix**: Categorized strictly according to the latest resume:
     - **Frontend & Programming**: React.js, JavaScript, Python
     - **Machine Learning**: Machine Learning, Predictive Modeling, Statistical Analysis
@@ -95,3 +99,4 @@ npm run build
 ## 📄 License
 
 This portfolio repository is open source under the MIT License.
+

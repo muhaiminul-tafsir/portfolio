@@ -6,6 +6,7 @@ import { About } from './components/ui/About';
 import { Experience } from './components/ui/Experience';
 import { Projects } from './components/ui/Projects';
 import { Skills } from './components/ui/Skills';
+import { Certifications } from './components/ui/Certifications';
 import { Education } from './components/ui/Education';
 import { Contact } from './components/ui/Contact';
 import { Footer } from './components/ui/Footer';
@@ -19,7 +20,7 @@ export const App: React.FC = () => {
   useEffect(() => {
     setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
 
-    const sections = ['home', 'about', 'experience', 'projects', 'skills', 'education', 'contact'];
+    const sections = ['home', 'about', 'experience', 'projects', 'skills', 'certifications', 'education', 'contact'];
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
@@ -78,6 +79,7 @@ export const App: React.FC = () => {
         <Experience />
         <Projects />
         <Skills />
+        <Certifications />
         <Education />
         <Contact />
       </main>
